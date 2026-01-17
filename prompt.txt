@@ -1,0 +1,1 @@
+Make a JS SPA app. It takes a pasted-in image, sends a request to ollama on localhost that turns it into a JSON with all the 16 words on the image, then displays these words as boxes that the user can move around freely
