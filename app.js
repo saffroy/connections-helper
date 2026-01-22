@@ -31,6 +31,7 @@ async function processImage(base64Data) {
                 prompt: "List exactly 16 words found in this image. Return ONLY a JSON object with a key 'words' containing an array of strings.",
                 images: [base64Data],
                 stream: false,
+		keep_alive: "0",
                 format: "json"
             })
         });
