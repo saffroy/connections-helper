@@ -28,7 +28,7 @@ async function processImage(base64Data) {
             method: 'POST',
             body: JSON.stringify({
                 model: OLLAMA_MODEL,
-                prompt: "List exactly 16 words found in this image. Return ONLY a JSON object with a key 'words' containing an array of strings.",
+                prompt: "List the 16 words or sentences found in each cell in this image. Return ONLY a JSON object with a key 'words' containing an array of strings.",
                 images: [base64Data],
                 stream: false,
                 keep_alive: "0",
