@@ -5,6 +5,13 @@ const OLLAMA_MODEL = 'ministral-3:8b';
 const canvas = document.getElementById('canvas');
 const dropZone = document.getElementById('drop-zone');
 
+// Check user params
+const wordStr = (new URL(document.URL)).searchParams.get('words')
+if (wordStr) {
+    renderWords(JSON.parse(wordStr))
+    dropZone.innerText = "Words loaded! Drag them to reorganize.";
+}
+
 // 1. Capture Pasted Image
 window.addEventListener('paste', async (e) => {
     const item = e.clipboardData.items[0];
