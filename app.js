@@ -60,7 +60,7 @@ function renderWords(words) {
     canvas.innerHTML = '';
     
     const padding = 20;
-    const boxWidth = 120;
+    const boxWidth = 150;
     const boxHeight = 50;
     const columns = 4; // 4x4 grid for 16 words
 
