@@ -59,7 +59,8 @@ async function processImage(base64Data) {
 function renderWords(words) {
     canvas.innerHTML = '';
     
-    const padding = 20;
+    const xPadding = 40;
+    const yPadding = 20;
     const boxWidth = 150;
     const boxHeight = 50;
     const columns = 4; // 4x4 grid for 16 words
@@ -73,8 +74,8 @@ function renderWords(words) {
         const col = i % columns;
         const row = Math.floor(i / columns);
         
-        const x = padding + (col * (boxWidth + padding));
-        const y = padding + (row * (boxHeight + padding));
+        const x = xPadding + (col * (boxWidth + xPadding));
+        const y = yPadding + (row * (boxHeight + yPadding));
         
         div.style.left = `${x}px`;
         div.style.top = `${y}px`;
